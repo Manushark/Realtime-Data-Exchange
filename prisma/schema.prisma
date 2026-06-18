@@ -11,3 +11,11 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model ExchangeEvent {
+
+  id        Int      @id @default(autoincrement())
+  type      String
+  payload   String
+  createdAt DateTime @default(now())
+}
